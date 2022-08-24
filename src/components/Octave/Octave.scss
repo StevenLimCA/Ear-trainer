@@ -1,0 +1,23 @@
+.octave {
+
+
+    &__whiteNote {
+        background-color: white;
+        border-right: 0.1vmin solid black;
+        box-sizing: border-box;
+        height: 100%;
+        width: 7vmin;
+        float: left;
+
+    }
+
+    &__blackNote {
+        background-color: black;
+        height: 70%;
+        width: 3.5vmin;
+        transform: translateX(5.5vmin);
+        z-index: 105;
+
+
+    }
+}

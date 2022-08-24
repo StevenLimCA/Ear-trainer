@@ -4,7 +4,7 @@ import background from "../../background.svg";
 import Main from "../Pages/Main";
 export default function Background() {
   return (
-    <div className="Background">
+    <div className="background">
       <img src={background} className="piano-note" alt="logo" />
       <Main />
     </div>
