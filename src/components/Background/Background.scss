@@ -1,0 +1,33 @@
+.Background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .piano-note {
+
+        animation: piano-spin infinite 500s linear;
+    }
+}
+
+@keyframes piano-spin {
+    0% {
+        transform: rotate(0deg) scale(0.04);
+
+    }
+
+    50% {
+        transform: rotate(360deg) scale(3);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(0.04);
+    }
+
+
+
+
+
+}
