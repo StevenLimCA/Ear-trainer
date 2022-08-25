@@ -1,3 +1,5 @@
+@use '../../styles/partials/mixins'as *;
+
 .piano {
     position: absolute;
     margin: auto;
@@ -9,4 +11,7 @@
     height: 20vh;
     display: flex;
     flex-direction: row;
+
+
+
 }
