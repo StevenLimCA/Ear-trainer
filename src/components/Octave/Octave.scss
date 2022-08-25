@@ -6,7 +6,7 @@
         border-right: 0.1vmin solid black;
         box-sizing: border-box;
         height: 100%;
-        width: 5vmin;
+        width: 5vw;
 
 
     }
@@ -14,8 +14,8 @@
     &__blackNote {
         background-color: black;
         height: 70%;
-        width: 2.8vmin;
-        transform: translateX(3.2vmin);
+        width: 1.2vw;
+        transform: translateX(1.2vw);
         z-index: 105;
 
 

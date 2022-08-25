@@ -7,7 +7,7 @@ export default function Octave({ octaveNum }) {
   // const piano = Tone.SampleLibrary.load({ instruments: "piano" });
   const C = (e) => {
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`C${octaveNum}`, "5n");
+    synth.triggerAttackRelease(`C${octaveNum}`, "8n");
   };
   const Db = (e) => {
     const synth = new Tone.Synth().toDestination();

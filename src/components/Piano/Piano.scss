@@ -1,13 +1,12 @@
 .piano {
     position: absolute;
     margin: auto;
-    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 10vh;
     border: 0.2rem solid black;
-    width: 96vmin;
-    height: 33vmin;
+    width: 96vw;
+    height: 20vh;
     display: flex;
     flex-direction: row;
 }

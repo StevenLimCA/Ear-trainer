@@ -3,7 +3,7 @@ import Octave from "../Octave/Octave";
 import "./Piano.scss";
 
 export default function Piano() {
-  const octaveArr = [0, 1, 2];
+  const octaveArr = [0, 1, 2, 3, 4, 5, 6];
 
   return (
     <div className="piano">
