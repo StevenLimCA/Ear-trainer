@@ -8,22 +8,22 @@
 @media (prefers-reduced-motion: no-preference) {
     .piano-note {
 
-        animation: piano-spin infinite 500s linear;
+        animation: piano-spin infinite 300s linear;
     }
 }
 
 @keyframes piano-spin {
     0% {
-        transform: rotate(0deg) scale(0.04);
+        transform: rotate(0deg) scale(3);
 
     }
 
     50% {
-        transform: rotate(360deg) scale(3);
+        transform: rotate(360deg) scale(0.5);
     }
 
     100% {
-        transform: rotate(0deg) scale(0.04);
+        transform: rotate(0deg) scale(3);
     }
 
 

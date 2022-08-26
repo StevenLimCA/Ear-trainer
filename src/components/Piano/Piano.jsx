@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Octave from "../Octave/Octave";
 import "./Piano.scss";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Piano() {
   const [windowDimenion, detectHW] = useState({
@@ -16,8 +17,7 @@ export default function Piano() {
   };
 
   useEffect(() => {
-    console.log(windowDimenion.winWidth);
-    if (windowDimenion.winWidth < 768) {
+    if (windowDimenion.winWidth <= 768) {
       setOctaves([3]);
     } else if (windowDimenion.winWidth < 1280) {
       setOctaves([3, 4, 5]);
@@ -36,7 +36,7 @@ export default function Piano() {
   return (
     <div className="piano">
       {octaves.map((octave) => (
-        <Octave octaveNum={octave} />
+        <Octave octaveNum={octave} key={uuidv4()} />
       ))}
     </div>
   );
