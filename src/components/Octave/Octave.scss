@@ -4,12 +4,15 @@
 
 
     &__whiteNote {
-
         background-color: white;
         border-right: 0.1rem solid black;
         box-sizing: border-box;
         height: 100%;
         width: 15vw;
+
+        &:hover {
+            background-color: rgb(230, 230, 230);
+        }
 
         @include tablet {
             width: 15vw;
@@ -36,6 +39,12 @@
         width: 7vw;
         transform: translateX(10vw);
         z-index: 105;
+
+        &:hover {
+            background-color: rgb(26, 26, 26);
+        }
+
+
 
         @include tablet {
             width: 3vw;
