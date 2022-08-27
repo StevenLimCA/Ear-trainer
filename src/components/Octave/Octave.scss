@@ -41,14 +41,14 @@
         z-index: 105;
 
         &:hover {
-            background-color: rgb(26, 26, 26);
+            background-color: rgb(43, 43, 43);
         }
 
 
 
         @include tablet {
-            width: 3vw;
-            transform: translateX(3vw);
+            width: 4vw;
+            transform: translateX(5vw);
 
         }
 

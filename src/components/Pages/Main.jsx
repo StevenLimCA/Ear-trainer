@@ -6,7 +6,8 @@ export default function Main() {
   return (
     <div className="main">
       <main className="main__header">
-        <img src="./logo.svg" alt="ear-training" className="main__logo" />
+        <img src="./logo.svg" alt="ear-training" className="main__logo" />{" "}
+        Ear-Train
       </main>
       <Piano />
     </div>

@@ -17,10 +17,10 @@ export default function Piano() {
   };
 
   useEffect(() => {
-    if (windowDimenion.winWidth <= 768) {
+    if (windowDimenion.winWidth < 768) {
       setOctaves([3]);
     } else if (windowDimenion.winWidth < 1280) {
-      setOctaves([3, 4, 5]);
+      setOctaves([3, 4]);
     } else {
       setOctaves([1, 2, 3, 4, 5, 6]);
     }
