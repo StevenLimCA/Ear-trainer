@@ -10,11 +10,13 @@
     border-radius: 2rem;
 
     &__logo {
-        width: 5rem;
-        height: 5rem;
+        width: 3rem;
+        height: 3rem;
     }
 
     &__header {
         font-size: 2rem;
+        display: flex;
+        justify-content: center;
     }
 }
