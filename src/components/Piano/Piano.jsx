@@ -3,8 +3,8 @@ import Octave from "../Octave/Octave";
 import "./Piano.scss";
 import { v4 as uuidv4 } from "uuid";
 
-export default function Piano() {
-  const [windowDimenion, detectHW] = useState({
+export default function Piano(props) {
+  const [windowDimension, detectHW] = useState({
     winWidth: window.innerWidth,
     winHeight: window.innerHeight,
   });
@@ -16,27 +16,31 @@ export default function Piano() {
     });
   };
 
-  useEffect(() => {
-    if (windowDimenion.winWidth < 768) {
-      setOctaves([3]);
-    } else if (windowDimenion.winWidth < 1280) {
-      setOctaves([3, 4]);
-    } else {
-      setOctaves([1, 2, 3, 4, 5, 6]);
-    }
-    window.addEventListener("resize", detectSize);
+  useEffect(
+    (props) => {
+      console.log(windowDimension.winWidth + ": " + octaves);
+      if (windowDimension.winWidth < 768) {
+        setOctaves([3, 4]);
+      } else if (windowDimension.winWidth < 1280) {
+        setOctaves([3, 4, 5]);
+      } else {
+        setOctaves([1, 2, 3, 4, 5, 6]);
+      }
+      window.addEventListener("resize", detectSize);
 
-    return () => {
-      window.removeEventListener("resize", detectSize);
-    };
-  }, [windowDimenion]);
+      return () => {
+        window.removeEventListener("resize", detectSize);
+      };
+    },
+    [windowDimension]
+  );
 
-  const [octaves, setOctaves] = useState([0, 1, 2, 3, 4, 5, 6]);
+  const [octaves, setOctaves] = useState([1, 2, 3, 4, 5, 6, 7]);
 
   return (
     <div className="piano">
       {octaves.map((octave) => (
-        <Octave octaveNum={octave} key={uuidv4()} />
+        <Octave setNote={props.setNote} octaveNum={octave} key={uuidv4()} />
       ))}
     </div>
   );

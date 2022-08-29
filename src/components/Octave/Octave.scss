@@ -8,7 +8,7 @@
         border-right: 0.1rem solid black;
         box-sizing: border-box;
         height: 100%;
-        width: 15vw;
+        width: 10vw;
 
         &:hover {
             background-color: rgb(230, 230, 230);
@@ -36,8 +36,8 @@
     &__blackNote {
         background-color: black;
         height: 70%;
-        width: 7vw;
-        transform: translateX(10vw);
+        width: 5vw;
+        transform: translateX(5vw);
         z-index: 105;
 
         &:hover {
@@ -47,8 +47,8 @@
 
 
         @include tablet {
-            width: 4vw;
-            transform: translateX(5vw);
+            width: 3vw;
+            transform: translateX(3.5vw);
 
         }
 
