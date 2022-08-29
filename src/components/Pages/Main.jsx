@@ -8,8 +8,8 @@ export default function Main() {
   return (
     <div className="main">
       <main className="main__header">
-        <img src="./logo.svg" alt="ear-training" className="main__logo" />{" "}
-        Ear-Train
+        <img src="./logo.svg" alt="ear-training" className="main__logo" /> Web
+        Piano
       </main>
       <Notation note={note} />
       <Piano setNote={setNote} />
