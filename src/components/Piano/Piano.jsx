@@ -18,7 +18,6 @@ export default function Piano(props) {
 
   useEffect(
     (props) => {
-      console.log(windowDimension.winWidth + ": " + octaves);
       if (windowDimension.winWidth < 768) {
         setOctaves([3, 4]);
       } else if (windowDimension.winWidth < 1280) {
