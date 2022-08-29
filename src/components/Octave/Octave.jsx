@@ -6,50 +6,62 @@ import * as Tone from "tone";
 export default function Octave({ octaveNum }) {
   // const piano = Tone.SampleLibrary.load({ instruments: "piano" });
   const C = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`C${octaveNum}`, "8n");
   };
   const Db = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`C#${octaveNum}`, "8n");
   };
   const D = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`D${octaveNum}`, "8n");
   };
   const E = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`E${octaveNum}`, "8n");
   };
   const Eb = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`D#${octaveNum}`, "8n");
   };
   const F = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`F${octaveNum}`, "8n");
   };
   const Gb = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`F#${octaveNum}`, "8n");
   };
   const G = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`G${octaveNum}`, "8n");
   };
   const Ab = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`G#${octaveNum}`, "8n");
   };
   const A = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`A${octaveNum}`, "8n");
   };
   const Bb = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`A#${octaveNum}`, "8n");
   };
   const B = (e) => {
+    e.stopPropagation();
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease(`B${octaveNum}`, "8n");
   };
