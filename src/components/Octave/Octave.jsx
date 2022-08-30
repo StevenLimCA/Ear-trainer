@@ -9,7 +9,7 @@ export default function Octave(props) {
     e.stopPropagation();
     await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`C${props.octaveNum}`, "4n");
+    await synth.triggerAttackRelease(`C${props.octaveNum}`, "4n");
     props.setNote("C" + props.octaveNum);
   };
   const Db = async (e) => {
