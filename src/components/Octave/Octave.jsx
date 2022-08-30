@@ -5,119 +5,131 @@ import * as Tone from "tone";
 
 export default function Octave(props) {
   // const piano = Tone.SampleLibrary.load({ instruments: "piano" });
-  const C = (e) => {
+  const C = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`C${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`C${props.octaveNum}`, "4n");
     props.setNote("C" + props.octaveNum);
   };
-  const Db = (e) => {
+  const Db = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`C#${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`C#${props.octaveNum}`, "4n");
     props.setNote("C#" + props.octaveNum);
   };
-  const D = (e) => {
+  const D = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`D${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`D${props.octaveNum}`, "4n");
     props.setNote("D" + props.octaveNum);
   };
-  const Eb = (e) => {
+  const Eb = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`D#${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`D#${props.octaveNum}`, "4n");
     props.setNote("D#" + props.octaveNum);
   };
-  const E = (e) => {
+  const E = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`E${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`E${props.octaveNum}`, "4n");
     props.setNote("E" + props.octaveNum);
   };
 
-  const F = (e) => {
+  const F = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`F${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`F${props.octaveNum}`, "4n");
     props.setNote("F" + props.octaveNum);
   };
-  const Gb = (e) => {
+  const Gb = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`F#${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`F#${props.octaveNum}`, "4n");
     props.setNote("F#" + props.octaveNum);
   };
-  const G = (e) => {
+  const G = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`G${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`G${props.octaveNum}`, "4n");
     props.setNote("G" + props.octaveNum);
   };
-  const Ab = (e) => {
+  const Ab = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`G#${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`G#${props.octaveNum}`, "4n");
     props.setNote("G#" + props.octaveNum);
   };
-  const A = (e) => {
+  const A = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`A${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`A${props.octaveNum}`, "4n");
     props.setNote("A" + props.octaveNum);
   };
-  const Bb = (e) => {
+  const Bb = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`A#${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`A#${props.octaveNum}`, "4n");
     props.setNote("A#" + props.octaveNum);
   };
-  const B = (e) => {
+  const B = async (e) => {
     e.stopPropagation();
+    await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`B${props.octaveNum}`, "8n");
+    synth.triggerAttackRelease(`B${props.octaveNum}`, "4n");
     props.setNote("B" + props.octaveNum);
   };
 
   return (
     <>
-      <div className={`octave__whiteNote C${props.octaveNum}`} onClick={C}>
+      <div className={`octave__whiteNote C${props.octaveNum}`} onMouseDown={C}>
         <div
           className={`octave__blackNote Db${props.octaveNum}`}
-          onClick={Db}
+          onMouseDown={Db}
         ></div>
       </div>
-      <div className={`octave__whiteNote D${props.octaveNum}`} onClick={D}>
+      <div className={`octave__whiteNote D${props.octaveNum}`} onMouseDown={D}>
         <div
           className={`octave__blackNote Eb${props.octaveNum}`}
-          onClick={Eb}
+          onMouseDown={Eb}
         ></div>
       </div>
       <div
         className={`octave__whiteNote E${props.octaveNum}`}
-        onClick={E}
+        onMouseDown={E}
       ></div>
-      <div className={`octave__whiteNote F${props.octaveNum}`} onClick={F}>
+      <div className={`octave__whiteNote F${props.octaveNum}`} onMouseDown={F}>
         <div
           className={`octave__blackNote Gb${props.octaveNum}`}
-          onClick={Gb}
+          onMouseDown={Gb}
         ></div>
       </div>
-      <div className={`octave__whiteNote G${props.octaveNum}`} onClick={G}>
+      <div className={`octave__whiteNote G${props.octaveNum}`} onMouseDown={G}>
         <div
           className={`octave__blackNote Ab${props.octaveNum}`}
-          onClick={Ab}
+          onMouseDown={Ab}
         ></div>
       </div>
-      <div className={`octave__whiteNote A${props.octaveNum}`} onClick={A}>
+      <div className={`octave__whiteNote A${props.octaveNum}`} onMouseDown={A}>
         <div
           className={`octave__blackNote Ab${props.octaveNum}`}
-          onClick={Bb}
+          onMouseDown={Bb}
         ></div>
       </div>
       <div
         className={`octave__whiteNote B${props.octaveNum}`}
-        onClick={B}
+        onMouseDown={B}
       ></div>
     </>
   );
