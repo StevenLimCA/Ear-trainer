@@ -1,94 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Octave.scss";
 import * as Tone from "tone";
 // import SampleLibrary from "../../global/Tonejs-Instruments";
 
 export default function Octave(props) {
+  const [isActive, setIsActive] = useState();
+
   // const piano = Tone.SampleLibrary.load({ instruments: "piano" });
-  const C = async (e) => {
-    e.stopPropagation();
+  const playKey = async (note) => {
+    setIsActive(`${note}${props.octaveNum}`);
     await Tone.start();
     const synth = new Tone.Synth().toDestination();
-    await synth.triggerAttackRelease(`C${props.octaveNum}`, "4n");
-    props.setNote("C" + props.octaveNum);
+    await synth.triggerAttackRelease(`${note}${props.octaveNum}`, "4n");
+    props.setNote(`${note}` + props.octaveNum);
+  };
+
+  const C = async (e) => {
+    e.stopPropagation();
+    playKey("C");
   };
   const Db = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`C#${props.octaveNum}`, "4n");
-    props.setNote("C#" + props.octaveNum);
+    playKey("C#");
   };
   const D = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`D${props.octaveNum}`, "4n");
-    props.setNote("D" + props.octaveNum);
+    playKey("D");
   };
   const Eb = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`D#${props.octaveNum}`, "4n");
-    props.setNote("D#" + props.octaveNum);
+    playKey("D#");
   };
   const E = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`E${props.octaveNum}`, "4n");
-    props.setNote("E" + props.octaveNum);
+    playKey("E");
   };
-
   const F = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`F${props.octaveNum}`, "4n");
-    props.setNote("F" + props.octaveNum);
+    playKey("F");
   };
   const Gb = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`F#${props.octaveNum}`, "4n");
-    props.setNote("F#" + props.octaveNum);
+    playKey("F#");
   };
   const G = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`G${props.octaveNum}`, "4n");
-    props.setNote("G" + props.octaveNum);
+    playKey("G");
   };
   const Ab = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`G#${props.octaveNum}`, "4n");
-    props.setNote("G#" + props.octaveNum);
+    playKey("G#");
   };
   const A = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`A${props.octaveNum}`, "4n");
-    props.setNote("A" + props.octaveNum);
+    playKey("A");
   };
   const Bb = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`A#${props.octaveNum}`, "4n");
-    props.setNote("A#" + props.octaveNum);
+    playKey("A#");
   };
   const B = async (e) => {
     e.stopPropagation();
-    await Tone.start();
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(`B${props.octaveNum}`, "4n");
-    props.setNote("B" + props.octaveNum);
+    playKey("B");
   };
 
   return (
@@ -99,7 +72,7 @@ export default function Octave(props) {
           onMouseDown={Db}
         ></div>
       </div>
-      <div className={`octave__whiteNote D${props.octaveNum}`} onMouseDown={D}>
+      <div className={` octave__whiteNote D${props.octaveNum}`} onMouseDown={D}>
         <div
           className={`octave__blackNote Eb${props.octaveNum}`}
           onMouseDown={Eb}
