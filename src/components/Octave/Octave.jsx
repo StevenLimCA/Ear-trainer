@@ -105,6 +105,9 @@ export default function Octave(props) {
       "G#7": "Ab7.mp3",
     },
     baseUrl: "audio/",
+    onload: () => {
+      sampler.triggerAttackRelease(["C1", "E1", "G1", "B1"], 0.5);
+    },
   }).toDestination();
   // Keyboard entry
   useEffect(() => {
@@ -143,8 +146,6 @@ export default function Octave(props) {
   //   e.stopPropagation();
   // };
   const playKey = async (note) => {
-    await Tone.start();
-    console.log(`${note}${props.octaveNum}`);
     await sampler.triggerAttack(`${note}${props.octaveNum}`);
     // await Tone.start();
     // const synth = new Tone.Synth().toDestination();
