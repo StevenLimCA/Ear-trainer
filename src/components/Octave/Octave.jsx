@@ -143,7 +143,9 @@ export default function Octave(props) {
     e.stopPropagation();
   };
   const playKey = async (note) => {
-    sampler.triggerAttack(`${note}${props.octaveNum}`);
+    await Tone.start();
+    console.log(`${note}${props.octaveNum}`);
+    await sampler.triggerAttack(`${note}${props.octaveNum}`);
     // await Tone.start();
     // const synth = new Tone.Synth().toDestination();
     // await synth.triggerAttackRelease(`${note}${props.octaveNum}`, "4n");
