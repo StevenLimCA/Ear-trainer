@@ -108,40 +108,40 @@ export default function Octave(props) {
   }).toDestination();
   // Keyboard entry
   useEffect(() => {
-    document.addEventListener("keydown", detectKeyDown, false);
-    document.addEventListener("keyup", detectKeyUp, false);
-    return () => {
-      document.removeEventListener("keydown", detectKeyDown);
-    };
+    // document.addEventListener("keydown", detectKeyDown, false);
+    // document.addEventListener("keyup", detectKeyUp, false);
+    // return () => {
+    //   document.removeEventListener("keydown", detectKeyDown);
+    // };
   }, []);
-  const detectKeyDown = (e) => {
-    if (e.key === "z") {
-      playKey("C");
-    } else if (e.key === "s") {
-      playKey("C#");
-    } else if (e.key === "x") {
-      playKey("D");
-    } else if (e.key === "d") {
-      playKey("D#");
-    } else if (e.key === "c") {
-      playKey("E");
-    } else if (e.key === "v") {
-      playKey("F");
-    } else if (e.key === "f") {
-      playKey("F#");
-    } else if (e.key === "b") {
-      playKey("G");
-    } else if (e.key === "g") {
-      playKey("G#");
-    } else if (e.key === "b") {
-      playKey("A");
-    } else if (e.key === "n") {
-      playKey("B");
-    }
-  };
-  const detectKeyUp = (e) => {
-    e.stopPropagation();
-  };
+  // const detectKeyDown = (e) => {
+  //   if (e.key === "z") {
+  //     playKey("C");
+  //   } else if (e.key === "s") {
+  //     playKey("C#");
+  //   } else if (e.key === "x") {
+  //     playKey("D");
+  //   } else if (e.key === "d") {
+  //     playKey("D#");
+  //   } else if (e.key === "c") {
+  //     playKey("E");
+  //   } else if (e.key === "v") {
+  //     playKey("F");
+  //   } else if (e.key === "f") {
+  //     playKey("F#");
+  //   } else if (e.key === "b") {
+  //     playKey("G");
+  //   } else if (e.key === "g") {
+  //     playKey("G#");
+  //   } else if (e.key === "b") {
+  //     playKey("A");
+  //   } else if (e.key === "n") {
+  //     playKey("B");
+  //   }
+  // };
+  // const detectKeyUp = (e) => {
+  //   e.stopPropagation();
+  // };
   const playKey = async (note) => {
     await Tone.start();
     console.log(`${note}${props.octaveNum}`);
