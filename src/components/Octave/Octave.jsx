@@ -52,13 +52,13 @@ export default function Octave(props) {
     // tripleOscillator.add(sine).add(square).add(triangle);
     // tripleOscillator.play({ pitch: `${note + props.octaveNum}` });
 
-    sampler.triggerAttack(note + props.octaveNum ?? "");
-    // synth.triggerAttack(`${note}${props.octaveNum}`, clickCount);
+    // sampler.triggerAttack(note + props.octaveNum ?? "");
+    synth.triggerAttack(`${note}${props.octaveNum}`, clickCount);
   };
   const releaseKey = (note) => {
     console.log(note + props.octaveNum ?? "");
-    // synth.triggerRelease("1");
-    sampler.triggerRelease("1");
+    synth.triggerRelease("1");
+    // sampler.triggerRelease("1");
   };
   // screen entry
   const C = async (e) => {
