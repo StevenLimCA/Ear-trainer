@@ -5,10 +5,11 @@
 
     &__whiteNote {
         background-color: white;
-        border-right: 0.1rem solid black;
+        border: 0.2rem solid rgb(60, 60, 60);
         box-sizing: border-box;
         height: 100%;
         width: 10vw;
+        border-radius: 0.5rem;
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
         -webkit-user-select: none;
@@ -35,10 +36,11 @@
     }
 
     &__blackNote {
-        background-color: black;
+        background-color: rgb(35, 35, 35);
         height: 70%;
+        border-radius: 0.5rem;
         width: 5vw;
-        transform: translateX(5vw);
+        transform: translateX(3.5vw);
         z-index: 105;
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
@@ -53,14 +55,14 @@
 
 
         @include tablet {
-            width: 3vw;
-            transform: translateX(3.5vw);
+            width: 3.8vw;
+            transform: translateX(2vw);
 
         }
 
         @include desktop {
-            width: 1.5vw;
-            transform: translateX(1.4vw);
+            width: 1.9vw;
+            transform: translateX(1.3vw);
 
 
         }

@@ -23,7 +23,7 @@ export default function Piano(props) {
       } else if (windowDimension.winWidth < 1280) {
         setOctaves([3, 4, 5]);
       } else {
-        setOctaves([1, 2, 3, 4, 5, 6]);
+        setOctaves([3, 4, 5, 6, 7, 8]);
       }
       window.addEventListener("resize", detectSize);
 
@@ -34,7 +34,7 @@ export default function Piano(props) {
     [windowDimension]
   );
 
-  const [octaves, setOctaves] = useState([1, 2, 3, 4, 5, 6, 7]);
+  const [octaves, setOctaves] = useState([2, 3, 4, 5, 6, 7, 8]);
 
   return (
     <div className="piano">
