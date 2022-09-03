@@ -57,8 +57,8 @@ export default function Octave(props) {
   };
   const releaseKey = (note) => {
     console.log(note + props.octaveNum ?? "");
-    synth.triggerRelease("1");
-    // await sampler.triggerRelease(note + props.octaveNum ?? "");
+    // synth.triggerRelease("1");
+    sampler.triggerRelease("1");
   };
   // screen entry
   const C = async (e) => {

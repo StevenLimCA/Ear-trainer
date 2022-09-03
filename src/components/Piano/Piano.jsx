@@ -23,7 +23,7 @@ export default function Piano(props) {
       } else if (windowDimension.winWidth < 1280) {
         setOctaves([3, 4, 5]);
       } else {
-        setOctaves([3, 4, 5, 6, 7, 8]);
+        setOctaves([2, 3, 4, 5, 6, 7]);
       }
       window.addEventListener("resize", detectSize);
 
