@@ -25,8 +25,9 @@ export default function Piano(props) {
       } else {
         setOctaves([2, 3, 4, 5, 6, 7]);
       }
-      window.addEventListener("resize", detectSize);
 
+      // document.addEventListener("keydown", detectKeyDown, false);
+      window.addEventListener("resize", detectSize);
       return () => {
         window.removeEventListener("resize", detectSize);
       };
@@ -34,12 +35,17 @@ export default function Piano(props) {
     [windowDimension]
   );
 
-  const [octaves, setOctaves] = useState([2, 3, 4, 5, 6, 7, 8]);
+  const [octaves, setOctaves] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
 
   return (
     <div className="piano">
       {octaves.map((octave) => (
-        <Octave setNote={props.setNote} octaveNum={octave} key={uuidv4()} />
+        <Octave
+          setNote={props.setNote}
+          octaveNum={octave}
+          key={uuidv4()}
+          keyNote={props.keyNote}
+        />
       ))}
     </div>
   );

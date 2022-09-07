@@ -16,7 +16,7 @@
         -o-user-select: none;
         user-select: none;
 
-        // &:hover {
+        // &--active {
         //     background-color: rgb(230, 230, 230);
         // }
 
@@ -69,21 +69,23 @@
     }
 }
 
-// .C0,
-// .Db0,
-// .C1,
-// .Db1,
-// .C2,
-// .Db2,
-// .C3,
-// .Db3,
-// .C4,
-// .Db4,
-// .C5,
-// .Db5,
-// .C6,
-// .Db6,
-// .C7,
-// .Db7 {
-//     background-color: rgba(165, 165, 165, 0.812);
-// }
+.C0,
+.Db0,
+.C1,
+.Db1,
+.C2,
+.Db2,
+.C3,
+.Db3,
+.C4,
+.Db4,
+.C5,
+.Db5,
+.C6,
+.Db6,
+.C7,
+.Db7 {
+    &--active {
+        background-color: rgb(57, 48, 48);
+    }
+}

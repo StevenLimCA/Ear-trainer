@@ -4,7 +4,7 @@ import Piano from "../Piano/Piano";
 import "./Main.scss";
 
 export default function Main() {
-  const [note, setNote] = useState();
+  const [note, setNote] = useState("");
   return (
     <div className="main">
       <main className="main__header">
