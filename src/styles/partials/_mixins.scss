@@ -19,3 +19,8 @@
         @content
     }
 }
+
+@mixin add-font {
+
+    font-family: 'Source Sans Pro', sans-serif;
+}

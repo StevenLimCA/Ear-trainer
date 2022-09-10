@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Octave from "../Octave/Octave";
 import "./Piano.scss";
+
 import { v4 as uuidv4 } from "uuid";
 
-export default function Piano(props) {
+export default function Piano({ octaves, setOctaves, setNote, keyNote }) {
+  // const [octaves, setOctaves] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
   const [windowDimension, detectHW] = useState({
     winWidth: window.innerWidth,
     winHeight: window.innerHeight,
   });
-
   const detectSize = () => {
     detectHW({
       winWidth: window.innerWidth,
@@ -35,16 +36,14 @@ export default function Piano(props) {
     [windowDimension]
   );
 
-  const [octaves, setOctaves] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
-
   return (
     <div className="piano">
       {octaves.map((octave) => (
         <Octave
-          setNote={props.setNote}
+          setNote={setNote}
           octaveNum={octave}
           key={uuidv4()}
-          keyNote={props.keyNote}
+          keyNote={keyNote}
         />
       ))}
     </div>

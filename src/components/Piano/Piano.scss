@@ -10,6 +10,7 @@
     height: 25vh;
     display: flex;
     flex-direction: row;
+    z-index: 106;
 
     @include tablet {}
 
