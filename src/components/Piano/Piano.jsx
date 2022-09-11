@@ -4,7 +4,17 @@ import "./Piano.scss";
 
 import { v4 as uuidv4 } from "uuid";
 
-export default function Piano({ octaves, setOctaves, setNote, keyNote }) {
+export default function Piano({
+  octaves,
+  setOctaves,
+  setNote,
+  keyNote,
+  setNoteActive,
+  noteActive,
+  playKey,
+  note,
+}) {
+  console.log(note);
   // const [octaves, setOctaves] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
   const [windowDimension, detectHW] = useState({
     winWidth: window.innerWidth,
@@ -40,10 +50,14 @@ export default function Piano({ octaves, setOctaves, setNote, keyNote }) {
     <div className="piano">
       {octaves.map((octave) => (
         <Octave
+          note={note}
+          setNoteActive={setNoteActive}
+          noteActive={noteActive}
           setNote={setNote}
           octaveNum={octave}
           key={uuidv4()}
           keyNote={keyNote}
+          playKey={playKey}
         />
       ))}
     </div>

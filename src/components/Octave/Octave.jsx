@@ -3,31 +3,29 @@ import "./Octave.scss";
 import { sampler } from "../../Utilz/Tone";
 // import Wad from "web-audio-daw";
 
-export default function Octave(props) {
-  const [noteActive, setNoteActive] = useState("");
-
-  // const synth = new Tone.Synth().toDestination();
-  const playKey = (note) => {
-    props.setNote(note + props.octaveNum);
-    sampler.triggerAttack(note + props.octaveNum ?? "");
-    // synth.triggerAttack(`${note}${props.octaveNum}`, clickCount);
-  };
+export default function Octave({
+  note,
+  setNote,
+  octaveNum,
+  noteActive,
+  setNoteActive,
+  playKey,
+}) {
   const releaseKey = (note) => {
-    setNoteActive(note + props.octaveNum);
+    setNoteActive(note + octaveNum);
     // synth.triggerRelease("1");
-    sampler.triggerRelease("0.5");
+    sampler.triggerRelease("0");
   };
 
   const playKeyHandler = (e) => {
     e.stopPropagation();
-    playKey(e.target.classList[1].slice(0, -1));
+    playKey(e.target.classList[1]);
   };
 
   const releaseKeyHandler = (e) => {
     releaseKey(e.target.classList[1].slice(0, -1));
   };
 
-  // screen entry
   useEffect(() => {
     setNoteActive(() => noteActive);
   }, [noteActive]);
@@ -36,9 +34,9 @@ export default function Octave(props) {
     <>
       <div
         className={
-          noteActive?.slice(0, -1) === "C"
-            ? `octave__whiteNote C${props.octaveNum} ${noteActive}--active`
-            : `octave__whiteNote C${props.octaveNum}`
+          noteActive === `C${octaveNum}`
+            ? `octave__whiteNote C${octaveNum} ${noteActive}--active`
+            : `octave__whiteNote C${octaveNum}`
         }
         onMouseDown={playKeyHandler}
         x
@@ -46,9 +44,9 @@ export default function Octave(props) {
       >
         <div
           className={
-            noteActive?.slice(0, -1) === "Db"
-              ? `octave__blackNote Db${props.octaveNum} ${noteActive}--active`
-              : `octave__blackNote Db${props.octaveNum}`
+            noteActive === `Db${octaveNum}`
+              ? `octave__blackNote Db${octaveNum} ${noteActive}--active`
+              : `octave__blackNote Db${octaveNum}`
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
@@ -56,18 +54,18 @@ export default function Octave(props) {
       </div>
       <div
         className={
-          noteActive?.slice(0, -1) === "D"
-            ? `octave__whiteNote D${props.octaveNum} ${noteActive}--active`
-            : `octave__whiteNote D${props.octaveNum}`
+          noteActive === `D${octaveNum}`
+            ? `octave__whiteNote D${octaveNum} ${noteActive}--active`
+            : `octave__whiteNote D${octaveNum}`
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
       >
         <div
           className={
-            noteActive?.slice(0, -1) === "Eb"
-              ? `octave__blackNote Eb${props.octaveNum} ${noteActive}--active`
-              : `octave__blackNote Eb${props.octaveNum}`
+            noteActive === `Eb${octaveNum}`
+              ? `octave__blackNote Eb${octaveNum} ${noteActive}--active`
+              : `octave__blackNote Eb${octaveNum}`
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
@@ -75,27 +73,27 @@ export default function Octave(props) {
       </div>
       <div
         className={
-          noteActive?.slice(0, -1) === "E"
-            ? `octave__whiteNote E${props.octaveNum} ${noteActive}--active`
-            : `octave__whiteNote E${props.octaveNum}`
+          noteActive === `E${octaveNum}`
+            ? `octave__whiteNote E${octaveNum} ${noteActive}--active`
+            : `octave__whiteNote E${octaveNum}`
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
       ></div>
       <div
         className={
-          noteActive?.slice(0, -1) === "F"
-            ? `octave__whiteNote F${props.octaveNum} ${noteActive}--active`
-            : `octave__whiteNote F${props.octaveNum}`
+          noteActive === `F${octaveNum}`
+            ? `octave__whiteNote F${octaveNum} ${noteActive}--active`
+            : `octave__whiteNote F${octaveNum}`
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
       >
         <div
           className={
-            noteActive?.slice(0, -1) === "Gb"
-              ? `octave__blackNote Gb${props.octaveNum} ${noteActive}--active`
-              : `octave__blackNote Gb${props.octaveNum}`
+            noteActive === `Gb${octaveNum}`
+              ? `octave__blackNote Gb${octaveNum} ${noteActive}--active`
+              : `octave__blackNote Gb${octaveNum}`
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
@@ -103,18 +101,18 @@ export default function Octave(props) {
       </div>
       <div
         className={
-          noteActive?.slice(0, -1) === "G"
-            ? `octave__whiteNote G${props.octaveNum} ${noteActive}--active`
-            : `octave__whiteNote G${props.octaveNum}`
+          noteActive === `G${octaveNum}`
+            ? `octave__whiteNote G${octaveNum} ${noteActive}--active`
+            : `octave__whiteNote G${octaveNum}`
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
       >
         <div
           className={
-            noteActive?.slice(0, -1) === "Ab"
-              ? `octave__blackNote Ab${props.octaveNum} ${noteActive}--active`
-              : `octave__blackNote Ab${props.octaveNum}`
+            noteActive === `Ab${octaveNum}`
+              ? `octave__blackNote Ab${octaveNum} ${noteActive}--active`
+              : `octave__blackNote Ab${octaveNum}`
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
@@ -122,18 +120,18 @@ export default function Octave(props) {
       </div>
       <div
         className={
-          noteActive?.slice(0, -1) === "A"
-            ? `octave__whiteNote A${props.octaveNum} ${noteActive}--active`
-            : `octave__whiteNote A${props.octaveNum}`
+          noteActive === `A${octaveNum}`
+            ? `octave__whiteNote A${octaveNum} ${noteActive}--active`
+            : `octave__whiteNote A${octaveNum}`
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
       >
         <div
           className={
-            noteActive?.slice(0, -1) === "Bb"
-              ? `octave__blackNote Bb${props.octaveNum} ${noteActive}--active`
-              : `octave__blackNote Bb${props.octaveNum}`
+            noteActive === `Bb${octaveNum}`
+              ? `octave__blackNote Bb${octaveNum} ${noteActive}--active`
+              : `octave__blackNote Bb${octaveNum}`
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
@@ -141,9 +139,9 @@ export default function Octave(props) {
       </div>
       <div
         className={
-          noteActive?.slice(0, -1) === "B"
-            ? `octave__whiteNote B${props.octaveNum} ${noteActive}--active`
-            : `octave__whiteNote B${props.octaveNum}`
+          noteActive === `B${octaveNum}`
+            ? `octave__whiteNote B${octaveNum} ${noteActive}--active`
+            : `octave__whiteNote B${octaveNum}`
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}

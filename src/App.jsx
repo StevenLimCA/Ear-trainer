@@ -5,13 +5,19 @@ import Footer from "./components/Footer/Footer";
 import React, { useState } from "react";
 import { sampler } from "./Utilz/Tone";
 import Notation from "./components/Notation/Notation";
+
 function App() {
   const [octaves, setNumOfOctaves] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
   const [keyNoteOctave, setKeyNoteOctave] = useState(3);
   const [keyNote, setKeyNote] = useState();
   const [note, setNote] = useState("");
+  const [noteActive, setNoteActive] = useState("");
+  const [second, setTime] = useState(0);
   const playKey = (note) => {
+    // console.log(setNote((second) => second + 1) + note);
     // sampler.triggerAttack(note);
+    setNote(note);
+    setNoteActive(note);
     setKeyNote(note + octaves);
     sampler.triggerAttack(note);
     // synth.triggerAttack(`${note}${props.octaveNum}`, clickCount);
@@ -86,6 +92,9 @@ function App() {
       <Background />
       <Notation note={note} />
       <Piano
+        note={note}
+        setNoteActive={setNoteActive}
+        noteActive={noteActive}
         octaves={octaves}
         setOctaves={setNumOfOctaves}
         keyNote={keyNote}
@@ -93,6 +102,12 @@ function App() {
         playKey={playKey}
         setNote={setNote}
       />
+      <label htmlFor="octaves">
+        {" "}
+        Octaves Controls: {octaves.map((octave) => octave + ", ")}
+      </label>
+      <input type="range" name="octaves" id="octaves" min="0" max="7" />
+
       <Footer />
     </div>
   );
