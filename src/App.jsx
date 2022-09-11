@@ -9,20 +9,17 @@ import Notation from "./components/Notation/Notation";
 function App() {
   const [octaves, setNumOfOctaves] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
   const [keyNoteOctave, setKeyNoteOctave] = useState(3);
-  const [keyNote, setKeyNote] = useState();
   const [note, setNote] = useState("");
-  const [noteActive, setNoteActive] = useState("");
-  const [second, setTime] = useState(0);
+  // const [second, setTime] = useState(0);
+
   const playKey = (note) => {
-    // console.log(setNote((second) => second + 1) + note);
-    // sampler.triggerAttack(note);
     setNote(note);
-    setNoteActive(note);
-    setKeyNote(note + octaves);
     sampler.triggerAttack(note);
-    // synth.triggerAttack(`${note}${props.octaveNum}`, clickCount);
   };
-  // const synth = new Tone.Synth().toDestination();
+  const releaseKey = (note) => {
+    // synth.triggerRelease("1");
+    sampler.triggerRelease(note, 1000);
+  };
 
   const keySwitchBoard = (e) => {
     switch (e) {
@@ -43,71 +40,73 @@ function App() {
       case "d":
         return "Gb";
       case "n":
-        return "Ab";
-      case "f":
         return "A";
+      case "f":
+        return "Ab";
       case "g":
         return "Bb";
       case "m":
         return "B";
+
       case "1":
-        return setKeyNoteOctave(1);
+        setKeyNoteOctave(1);
+        return "C";
       case "2":
-        return setKeyNoteOctave(2);
+        setKeyNoteOctave(2);
+        return "C";
       case "3":
-        return setKeyNoteOctave(3);
+        setKeyNoteOctave(3);
+        return "C";
       case "4":
-        return setKeyNoteOctave(4);
+        setKeyNoteOctave(4);
+        return "C";
       case "5":
-        return setKeyNoteOctave(5);
+        setKeyNoteOctave(5);
+        return "C";
       case "6":
-        return setKeyNoteOctave(6);
+        setKeyNoteOctave(6);
+        return "C";
       case "7":
-        return setKeyNoteOctave(7);
+        setKeyNoteOctave(7);
+        return "C";
+
       case "8":
-        return setKeyNoteOctave(8);
+        setKeyNoteOctave(8);
+        return "C";
       default:
         return "";
     }
   };
 
   const DetectKeyDown = (e) => {
-    setKeyNote(keySwitchBoard(e.key));
-    //console.log(keyNote);
+    if (e.repeat === true) {
+      return;
+    }
+    console.log(e.repeat);
+
     playKey(keySwitchBoard(e.key) + keyNoteOctave);
   };
-
-  // useEffect(() => {
-  //   if (
-  //     keyNote !== undefined &&
-  //     keyNote !== "" &&
-  //     keyNoteOctave !== undefined
-  //   ) {
-  //     playKey(keyNote + keyNoteOctave);
-  //   }
-  // }, [keyNote, keyNoteOctave]);
-
+  const DetectKeyUp = (e) => {
+    console.log(e.repeat);
+    releaseKey(keySwitchBoard(e.key) + keyNoteOctave);
+  };
   return (
-    <div className="App" tabIndex="0" onKeyPress={DetectKeyDown}>
+    <div
+      className="App"
+      tabIndex="0"
+      onKeyDown={DetectKeyDown}
+      onKeyUp={DetectKeyUp}
+    >
       <Background />
       <Notation note={note} />
       <Piano
         note={note}
-        setNoteActive={setNoteActive}
-        noteActive={noteActive}
         octaves={octaves}
         setOctaves={setNumOfOctaves}
-        keyNote={keyNote}
-        useKey={setKeyNote}
         playKey={playKey}
+        releaseKey={releaseKey}
         setNote={setNote}
       />
-      <label htmlFor="octaves">
-        {" "}
-        Octaves Controls: {octaves.map((octave) => octave + ", ")}
-      </label>
-      <input type="range" name="octaves" id="octaves" min="0" max="7" />
-
       <Footer />
     </div>
   );
