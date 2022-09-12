@@ -18,36 +18,41 @@ function App() {
   };
   const releaseKey = (note) => {
     // synth.triggerRelease("1");
-    sampler.triggerRelease(note, 1000);
+    sampler.triggerRelease(note, 500);
   };
 
   const keySwitchBoard = (e) => {
     switch (e) {
       case "z":
-        return "C";
+        return `A${keyNoteOctave - 1}`;
       case "a":
-        return "Db";
+        return "Db" + keyNoteOctave;
       case "x":
-        return "D";
+        return `B${keyNoteOctave - 1}`;
       case "s":
-        return "Eb";
+        return "Eb" + keyNoteOctave;
       case "c":
-        return "E";
+        return "C" + keyNoteOctave;
       case "v":
-        return "F";
+        return "D" + keyNoteOctave;
       case "b":
-        return "G";
+        return "E" + keyNoteOctave;
       case "d":
-        return "Gb";
+        return "Gb" + keyNoteOctave;
       case "n":
-        return "A";
+        return "F" + keyNoteOctave;
       case "f":
-        return "Ab";
+        return "Ab" + keyNoteOctave;
       case "g":
-        return "Bb";
+        return "Bb" + keyNoteOctave;
       case "m":
-        return "B";
-
+        return "G" + keyNoteOctave;
+      case ",":
+        return `A${keyNoteOctave}`;
+      case ".":
+        return `B${keyNoteOctave}`;
+      case "/":
+        return `C${keyNoteOctave + 1}`;
       case "1":
         setKeyNoteOctave(1);
         return "C";
@@ -82,12 +87,12 @@ function App() {
     if (e.repeat === true) {
       return;
     }
-    console.log(e.repeat);
+    // console.log(e.repeat);
 
-    playKey(keySwitchBoard(e.key) + keyNoteOctave);
+    playKey(keySwitchBoard(e.key));
   };
   const DetectKeyUp = (e) => {
-    console.log(e.repeat);
+    // console.log(e.repeat);
     releaseKey(keySwitchBoard(e.key) + keyNoteOctave);
   };
   return (

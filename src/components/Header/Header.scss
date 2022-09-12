@@ -1,7 +1,7 @@
 @use '../../styles/partials/mixins'as *;
 @use '../../styles/partials/fonts'as *;
 
-.main {
+.header {
     position: absolute;
     top: 1px;
     z-index: 100;
@@ -17,7 +17,7 @@
         height: 3rem;
     }
 
-    &__header {
+    &__main {
         font-size: 2rem;
         display: flex;
         justify-content: center;

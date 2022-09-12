@@ -4,11 +4,14 @@ import "./Octave.scss";
 export default function Octave({ note, octaveNum, playKey, releaseKey }) {
   const playKeyHandler = (e) => {
     e.stopPropagation();
-    e.preventDefault();
     playKey(e.target.classList[1]);
+
+    console.log(e.type + ": ");
+    // for (let i = 0; i < e.touches.length; i++) console.log(e.touches.item(i));
   };
 
   const releaseKeyHandler = (e) => {
+    e.preventDefault();
     releaseKey(e.target.classList[1]);
   };
 
@@ -21,8 +24,9 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
             : `octave__whiteNote C${octaveNum}`
         }
         onMouseDown={playKeyHandler}
-        x
         onMouseUp={releaseKeyHandler}
+        onTouchStart={playKeyHandler}
+        onTouchEnd={releaseKeyHandler}
       >
         <div
           className={
@@ -32,6 +36,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
+          onTouchStart={playKeyHandler}
+          onTouchEnd={releaseKeyHandler}
         ></div>
       </div>
       <div
@@ -42,6 +48,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
+        onTouchStart={playKeyHandler}
+        onTouchEnd={releaseKeyHandler}
       >
         <div
           className={
@@ -51,6 +59,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
+          onTouchStart={playKeyHandler}
+          onTouchEnd={releaseKeyHandler}
         ></div>
       </div>
       <div
@@ -61,6 +71,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
+        onTouchStart={playKeyHandler}
+        onTouchEnd={releaseKeyHandler}
       ></div>
       <div
         className={
@@ -70,6 +82,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
+        onTouchStart={playKeyHandler}
+        onTouchEnd={releaseKeyHandler}
       >
         <div
           className={
@@ -79,6 +93,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
+          onTouchStart={playKeyHandler}
+          onTouchEnd={releaseKeyHandler}
         ></div>
       </div>
       <div
@@ -89,6 +105,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
+        onTouchStart={playKeyHandler}
+        onTouchEnd={releaseKeyHandler}
       >
         <div
           className={
@@ -98,6 +116,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
+          onTouchStart={playKeyHandler}
+          onTouchEnd={releaseKeyHandler}
         ></div>
       </div>
       <div
@@ -108,6 +128,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
+        onTouchStart={playKeyHandler}
+        onTouchEnd={releaseKeyHandler}
       >
         <div
           className={
@@ -117,6 +139,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
+          onTouchStart={playKeyHandler}
+          onTouchEnd={releaseKeyHandler}
         ></div>
       </div>
       <div
@@ -127,6 +151,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
+        onTouchStart={playKeyHandler}
+        onTouchEnd={releaseKeyHandler}
       ></div>
     </>
   );
