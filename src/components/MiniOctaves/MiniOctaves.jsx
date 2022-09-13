@@ -29,16 +29,13 @@ export default function MiniOctaves({
             : `octave-mini__whiteNote C${octave}`
         }
       >
-        C{octave}
         <div
           className={
             note === `Db${octave}`
               ? `octave-mini__blackNote Db${octave} ${note}--active`
               : `octave-mini__blackNote Db${octave}`
           }
-        >
-          Db{octave}
-        </div>
+        ></div>
       </div>
       <div
         className={
@@ -47,17 +44,13 @@ export default function MiniOctaves({
             : `octave-mini__whiteNote D${octave}`
         }
       >
-        {" "}
-        D{octave}
         <div
           className={
             note === `Eb${octave}`
               ? `octave-mini__blackNote Eb${octave} ${note}--active`
               : `octave-mini__blackNote Eb${octave}`
           }
-        >
-          Eb{octave}
-        </div>
+        ></div>
       </div>
       <div
         className={
@@ -65,9 +58,7 @@ export default function MiniOctaves({
             ? `octave-mini__whiteNote E${octave} ${note}--active`
             : `octave-mini__whiteNote E${octave}`
         }
-      >
-        E{octave}
-      </div>
+      ></div>
       <div
         className={
           note === `F${octave}`
@@ -75,17 +66,13 @@ export default function MiniOctaves({
             : `octave-mini__whiteNote F${octave}`
         }
       >
-        {" "}
-        F{octave}
         <div
           className={
             note === `Gb${octave}`
               ? `octave-mini__blackNote Gb${octave} ${note}--active`
               : `octave-mini__blackNote Gb${octave}`
           }
-        >
-          Gb{octave}
-        </div>
+        ></div>
       </div>
       <div
         className={
@@ -94,16 +81,13 @@ export default function MiniOctaves({
             : `octave-mini__whiteNote G${octave}`
         }
       >
-        G{octave}
         <div
           className={
             note === `Ab${octave}`
               ? `octave-mini__blackNote Ab${octave} ${note}--active`
               : `octave-mini__blackNote Ab${octave}`
           }
-        >
-          Ab{octave}
-        </div>
+        ></div>
       </div>
       <div
         className={
@@ -112,18 +96,13 @@ export default function MiniOctaves({
             : `octave-mini__whiteNote A${octave}`
         }
       >
-        {" "}
-        A{octave}
         <div
           className={
             note === `Bb${octave}`
               ? `octave-mini__blackNote Bb${octave} ${note}--active`
               : `octave-mini__blackNote Bb${octave}`
           }
-        >
-          {" "}
-          Bb{octave}
-        </div>
+        ></div>
       </div>
       <div
         className={
@@ -131,9 +110,7 @@ export default function MiniOctaves({
             ? `octave-mini__whiteNote B${octave} ${note}--active`
             : `octave-mini__whiteNote B${octave}`
         }
-      >
-        B{octave}
-      </div>
+      ></div>
     </div>
   );
 }
