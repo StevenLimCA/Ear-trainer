@@ -12,6 +12,10 @@
         background-color: white;
         width: 90vw;
         height: 4rem;
+
+        @include desktop {
+            height: 6rem;
+        }
     }
 
 

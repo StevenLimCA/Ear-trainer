@@ -11,9 +11,9 @@
     display: flex;
     flex-direction: row;
     z-index: 106;
-    overflow-x: scroll;
+    // overflow-x: scroll;
     // scroll-padding: 1rem;
-    border-top: 0.2rem solid rgb(197, 0, 0);
+    border-top: 0.5rem solid rgb(197, 0, 0);
 
     @include tablet {
         border-top: 0.5rem solid rgb(197, 0, 0);

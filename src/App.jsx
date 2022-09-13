@@ -5,7 +5,6 @@ import Footer from "./components/Footer/Footer";
 import React, { useState } from "react";
 import { sampler } from "./Utilz/Tone";
 import Notation from "./components/Notation/Notation";
-
 import Controls from "./components/Controls/Controls";
 
 function App() {

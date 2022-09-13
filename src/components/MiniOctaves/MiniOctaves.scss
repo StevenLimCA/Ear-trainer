@@ -56,6 +56,9 @@
         -o-user-select: none;
         user-select: none;
 
+        @include desktop {
+            transform: translate(1vw, 0vw);
+        }
 
 
     }
