@@ -1,0 +1,20 @@
+@use '../../styles/partials/mixins'as *;
+
+.controls {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+    z-index: 105;
+
+    &__octaves {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        width: 90vw;
+        height: 5rem;
+    }
+
+    // @include desktop {
+    //     display: none;
+    // }
+}

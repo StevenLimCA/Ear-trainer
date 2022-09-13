@@ -11,6 +11,10 @@
     margin: 2vw;
     box-sizing: border-box;
     border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+
+    @include add-font;
 
     &__logo {
         width: 3rem;
@@ -21,6 +25,6 @@
         font-size: 2rem;
         display: flex;
         justify-content: center;
-        @include add-font;
+
     }
 }

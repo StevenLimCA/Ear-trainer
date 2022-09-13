@@ -1,6 +1,20 @@
 @use '../../styles/partials/mixins'as *;
 
-.octave {
+.octave-mini {
+    display: flex;
+
+    &:hover {
+
+        padding: 0.2rem 0;
+
+    }
+
+    &--active {
+        background-color: grey;
+        padding: 0.5rem 0;
+
+    }
+
     &__name {
         display: flex;
     }
@@ -10,11 +24,11 @@
         text-align: center;
         bottom: 1rem;
         color: rgb(190, 190, 190);
-        font-size: 0.5rem;
+        font-size: 0.2rem;
         border: 0.1rem solid rgba(157, 157, 157, 0.582);
         box-sizing: border-box;
         height: 100%;
-        width: 10vw;
+        width: 1.6vw;
         border-radius: 0 0 0.5rem 0.5rem;
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
@@ -22,19 +36,15 @@
         -o-user-select: none;
         user-select: none;
 
-        // &--active {
-        //     background-color: rgb(230, 230, 230);
+        // @include tablet {
+        //     // width: 15vw;
+        //     height: 100%;
         // }
 
-        @include tablet {
-            // width: 15vw;
-            height: 100%;
-        }
-
-        @include desktop {
-            // width: 15vw;
-            height: 100%;
-        }
+        // @include desktop {
+        //     // width: 15vw;
+        //     height: 100%;
+        // }
 
 
 
@@ -45,10 +55,8 @@
         background-color: rgb(35, 35, 35);
         height: 70%;
         border-radius: 0 0 0.5rem 0.5rem;
-
-
-        width: 5.5vw;
-        transform: translateX(3.5vw);
+        width: 1vw;
+        transform: translate(0.6vw, -1vw);
         z-index: 105;
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
@@ -56,24 +64,19 @@
         -o-user-select: none;
         user-select: none;
 
-        // &:hover {
-        //     background-color: rgb(43, 43, 43);
+
+        // @include tablet {
+        //     width: 3.6vw;
+        //     transform: translateX(2vw);
+
         // }
 
+        // @include desktop {
+        //     width: 1.7vw;
+        //     transform: translateX(1.3vw);
 
 
-        @include tablet {
-            width: 3.6vw;
-            transform: translateX(2vw);
-
-        }
-
-        @include desktop {
-            width: 1.7vw;
-            transform: translateX(1.3vw);
-
-
-        }
+        // }
     }
 }
 

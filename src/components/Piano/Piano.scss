@@ -5,17 +5,19 @@
     margin: auto;
     left: 0;
     right: 0;
-    bottom: 5vh;
-    width: 96vw;
-    height: 25vh;
+    bottom: 20vh;
+    width: 90vw;
+    height: 30vh;
     display: flex;
     flex-direction: row;
     z-index: 106;
-    overflow-y: scroll;
-    scroll-padding: 1rem;
+    overflow-x: scroll;
+    // scroll-padding: 1rem;
     border-top: 0.2rem solid rgb(197, 0, 0);
 
-    @include tablet {}
+    @include tablet {
+        border-top: 0.5rem solid rgb(197, 0, 0);
+    }
 
 
 }

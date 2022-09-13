@@ -3,7 +3,6 @@ import "./Octave.scss";
 
 export default function Octave({ note, octaveNum, playKey, releaseKey }) {
   const playKeyHandler = (e) => {
-    e.stopPropagation();
     playKey(e.target.classList[1]);
 
     console.log(e.type + ": ");
@@ -28,6 +27,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         onTouchStart={playKeyHandler}
         onTouchEnd={releaseKeyHandler}
       >
+        {" "}
+        C{octaveNum}
         <div
           className={
             note === `Db${octaveNum}`
@@ -38,7 +39,9 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           onMouseUp={releaseKeyHandler}
           onTouchStart={playKeyHandler}
           onTouchEnd={releaseKeyHandler}
-        ></div>
+        >
+          Db{octaveNum}
+        </div>
       </div>
       <div
         className={
@@ -51,6 +54,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         onTouchStart={playKeyHandler}
         onTouchEnd={releaseKeyHandler}
       >
+        {" "}
+        D{octaveNum}
         <div
           className={
             note === `Eb${octaveNum}`
@@ -61,7 +66,9 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           onMouseUp={releaseKeyHandler}
           onTouchStart={playKeyHandler}
           onTouchEnd={releaseKeyHandler}
-        ></div>
+        >
+          Eb{octaveNum}
+        </div>
       </div>
       <div
         className={
@@ -73,7 +80,9 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         onMouseUp={releaseKeyHandler}
         onTouchStart={playKeyHandler}
         onTouchEnd={releaseKeyHandler}
-      ></div>
+      >
+        E{octaveNum}
+      </div>
       <div
         className={
           note === `F${octaveNum}`
@@ -85,6 +94,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         onTouchStart={playKeyHandler}
         onTouchEnd={releaseKeyHandler}
       >
+        {" "}
+        F{octaveNum}
         <div
           className={
             note === `Gb${octaveNum}`
@@ -95,7 +106,9 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           onMouseUp={releaseKeyHandler}
           onTouchStart={playKeyHandler}
           onTouchEnd={releaseKeyHandler}
-        ></div>
+        >
+          Gb{octaveNum}
+        </div>
       </div>
       <div
         className={
@@ -108,6 +121,7 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         onTouchStart={playKeyHandler}
         onTouchEnd={releaseKeyHandler}
       >
+        G{octaveNum}
         <div
           className={
             note === `Ab${octaveNum}`
@@ -118,7 +132,9 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           onMouseUp={releaseKeyHandler}
           onTouchStart={playKeyHandler}
           onTouchEnd={releaseKeyHandler}
-        ></div>
+        >
+          Ab{octaveNum}
+        </div>
       </div>
       <div
         className={
@@ -131,6 +147,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         onTouchStart={playKeyHandler}
         onTouchEnd={releaseKeyHandler}
       >
+        {" "}
+        A{octaveNum}
         <div
           className={
             note === `Bb${octaveNum}`
@@ -141,7 +159,10 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           onMouseUp={releaseKeyHandler}
           onTouchStart={playKeyHandler}
           onTouchEnd={releaseKeyHandler}
-        ></div>
+        >
+          {" "}
+          Bb{octaveNum}
+        </div>
       </div>
       <div
         className={
@@ -153,7 +174,9 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         onMouseUp={releaseKeyHandler}
         onTouchStart={playKeyHandler}
         onTouchEnd={releaseKeyHandler}
-      ></div>
+      >
+        B{octaveNum}
+      </div>
     </>
   );
 }

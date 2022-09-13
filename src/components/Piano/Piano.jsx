@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Octave from "../Octave/Octave";
 import "./Piano.scss";
-
 import { v4 as uuidv4 } from "uuid";
 
 export default function Piano({

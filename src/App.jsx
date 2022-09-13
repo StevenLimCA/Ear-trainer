@@ -6,6 +6,8 @@ import React, { useState } from "react";
 import { sampler } from "./Utilz/Tone";
 import Notation from "./components/Notation/Notation";
 
+import Controls from "./components/Controls/Controls";
+
 function App() {
   const [octaves, setNumOfOctaves] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
   const [keyNoteOctave, setKeyNoteOctave] = useState(3);
@@ -95,6 +97,7 @@ function App() {
     // console.log(e.repeat);
     releaseKey(keySwitchBoard(e.key) + keyNoteOctave);
   };
+
   return (
     <div
       className="App"
@@ -112,6 +115,7 @@ function App() {
         releaseKey={releaseKey}
         setNote={setNote}
       />
+      <Controls note={note} setOctaves={setNumOfOctaves} octaves={octaves} />
       <Footer />
     </div>
   );
