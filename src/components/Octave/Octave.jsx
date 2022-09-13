@@ -24,8 +24,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
-        onTouchStart={playKeyHandler}
-        onTouchEnd={releaseKeyHandler}
+        // onTouchStart={playKeyHandler}
+        // onTouchEnd={releaseKeyHandler}
       >
         {" "}
         C{octaveNum}
@@ -37,8 +37,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
-          onTouchStart={playKeyHandler}
-          onTouchEnd={releaseKeyHandler}
+          // onTouchStart={playKeyHandler}
+          // onTouchEnd={releaseKeyHandler}
         >
           Db{octaveNum}
         </div>
@@ -51,8 +51,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
-        onTouchStart={playKeyHandler}
-        onTouchEnd={releaseKeyHandler}
+        // onTouchStart={playKeyHandler}
+        // onTouchEnd={releaseKeyHandler}
       >
         {" "}
         D{octaveNum}
@@ -64,8 +64,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
-          onTouchStart={playKeyHandler}
-          onTouchEnd={releaseKeyHandler}
+          // onTouchStart={playKeyHandler}
+          // onTouchEnd={releaseKeyHandler}
         >
           Eb{octaveNum}
         </div>
@@ -78,8 +78,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
-        onTouchStart={playKeyHandler}
-        onTouchEnd={releaseKeyHandler}
+        // onTouchStart={playKeyHandler}
+        // onTouchEnd={releaseKeyHandler}
       >
         E{octaveNum}
       </div>
@@ -91,8 +91,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
-        onTouchStart={playKeyHandler}
-        onTouchEnd={releaseKeyHandler}
+        // onTouchStart={playKeyHandler}
+        // onTouchEnd={releaseKeyHandler}
       >
         {" "}
         F{octaveNum}
@@ -104,8 +104,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
-          onTouchStart={playKeyHandler}
-          onTouchEnd={releaseKeyHandler}
+          // onTouchStart={playKeyHandler}
+          // onTouchEnd={releaseKeyHandler}
         >
           Gb{octaveNum}
         </div>
@@ -118,8 +118,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
-        onTouchStart={playKeyHandler}
-        onTouchEnd={releaseKeyHandler}
+        // onTouchStart={playKeyHandler}
+        // onTouchEnd={releaseKeyHandler}
       >
         G{octaveNum}
         <div
@@ -130,8 +130,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
-          onTouchStart={playKeyHandler}
-          onTouchEnd={releaseKeyHandler}
+          // onTouchStart={playKeyHandler}
+          // onTouchEnd={releaseKeyHandler}
         >
           Ab{octaveNum}
         </div>
@@ -144,8 +144,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
-        onTouchStart={playKeyHandler}
-        onTouchEnd={releaseKeyHandler}
+        // onTouchStart={playKeyHandler}
+        // onTouchEnd={releaseKeyHandler}
       >
         {" "}
         A{octaveNum}
@@ -157,8 +157,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
           }
           onMouseDown={playKeyHandler}
           onMouseUp={releaseKeyHandler}
-          onTouchStart={playKeyHandler}
-          onTouchEnd={releaseKeyHandler}
+          // onTouchStart={playKeyHandler}
+          // onTouchEnd={releaseKeyHandler}
         >
           {" "}
           Bb{octaveNum}
@@ -172,8 +172,8 @@ export default function Octave({ note, octaveNum, playKey, releaseKey }) {
         }
         onMouseDown={playKeyHandler}
         onMouseUp={releaseKeyHandler}
-        onTouchStart={playKeyHandler}
-        onTouchEnd={releaseKeyHandler}
+        // onTouchStart={playKeyHandler}
+        // onTouchEnd={releaseKeyHandler}
       >
         B{octaveNum}
       </div>
