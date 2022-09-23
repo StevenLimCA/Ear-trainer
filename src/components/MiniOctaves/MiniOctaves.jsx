@@ -8,9 +8,16 @@ export default function MiniOctaves({
 }) {
   const handleOctaveSelect = (e) => {
     let newOctave = [];
+
     for (let i = octave; i < octave + activeOctaves.length; i++) {
-      newOctave.push(i);
-      setOctaves(newOctave);
+      if (activeOctaves.length === 2 && octave >= 8) {
+        setOctaves([7, 8]);
+      } else if (activeOctaves.length === 5 && octave >= 4) {
+        setOctaves([4, 5, 6, 7, 8]);
+      } else {
+        newOctave.push(i);
+        setOctaves(newOctave);
+      }
     }
   };
 

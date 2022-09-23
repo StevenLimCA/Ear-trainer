@@ -4,8 +4,7 @@ import "./Octave.scss";
 export default function Octave({ note, octaveNum, playKey, releaseKey }) {
   const playKeyHandler = (e) => {
     playKey(e.target.classList[1]);
-
-    console.log(e.type + ": ");
+    console.log(e.type + ": " + e.target.classList[1]);
     // for (let i = 0; i < e.touches.length; i++) console.log(e.touches.item(i));
   };
 
