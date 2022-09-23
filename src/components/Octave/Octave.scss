@@ -1,6 +1,12 @@
 @use '../../styles/partials/mixins'as *;
 
 .octave {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
     &__name {
         display: flex;
     }
@@ -22,9 +28,7 @@
         -o-user-select: none;
         user-select: none;
 
-        // &--active {
-        //     background-color: rgb(230, 230, 230);
-        // }
+
 
         @include tablet {
             // width: 15vw;
@@ -46,23 +50,24 @@
         height: 70%;
         border-radius: 0 0 0.5rem 0.5rem;
         width: 5vw;
-        transform: translate(3.2vw, -2vw);
+        transform: translate(3.2vw, -5vw);
         z-index: 105;
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
         -webkit-user-select: none;
         -o-user-select: none;
         user-select: none;
+        transition: all 1s ease-in-out;
 
         @include tablet {
             width: 3.6vw;
-            transform: translate(4.1vw, -1vh);
+            transform: translate(4.1vw, -2.1vh);
 
         }
 
         @include desktop {
             width: 1.7vw;
-            transform: translateX(1.3vw);
+            transform: translate(1.3vw, -2vh);
 
 
         }
@@ -113,6 +118,17 @@
 .Bb7 {
     &--active {
         background-color: rgb(59, 59, 59);
+        transform: translate(3.2vw, -3.5vw);
+
+        @include tablet {
+            transform: translate(4.1vw, -1.2vh);
+        }
+
+        @include desktop {
+
+            transform: translate(1.3vw, -1.1vh);
+        }
+
     }
 
 }
