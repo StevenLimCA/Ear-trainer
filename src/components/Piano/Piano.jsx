@@ -29,7 +29,7 @@ export default function Piano({
       } else if (windowDimension.winWidth < 1280) {
         setOctaves([3, 4]);
       } else {
-        setOctaves([2, 3, 4, 5, 6, 7]);
+        setOctaves([3, 4, 5, 6, 7]);
       }
 
       window.addEventListener("resize", detectSize);

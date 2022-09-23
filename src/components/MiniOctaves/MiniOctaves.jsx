@@ -10,9 +10,10 @@ export default function MiniOctaves({
     let newOctave = [];
 
     for (let i = octave; i < octave + activeOctaves.length; i++) {
+      console.log(octave + " " + activeOctaves.length);
       if (activeOctaves.length === 2 && octave >= 8) {
         setOctaves([7, 8]);
-      } else if (activeOctaves.length === 5 && octave >= 4) {
+      } else if (activeOctaves.length === 5 && octave >= 5) {
         setOctaves([4, 5, 6, 7, 8]);
       } else {
         newOctave.push(i);
